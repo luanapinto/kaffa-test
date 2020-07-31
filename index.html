@@ -8,6 +8,7 @@
     <script type="text/javascript" src="exercise1.js"></script>
     <script type="text/javascript" src="exercise2.js"></script>
     <script type="text/javascript" src="exercise3.js"></script>
+    <script type="text/javascript" src="exercise4.js"></script>
     <script type="text/javascript" src="exercise5.js"></script>
     <script type="text/javascript" src="exercise6.js"></script>
 </head>
@@ -67,6 +68,41 @@
             <br><br>
 
             <input type="button" value="Check intersection" class="button" onclick="verifyIntersection()">
+        </form>
+    </div>
+    <br>
+
+    <!-- EXERCISE 4 -->
+    <div class="exercise4">
+        <header>Exercise 4: Compute area of intersection between two rectangles</header>
+        <form>
+            <label><b>RECTANGLE A</b></label>
+            <br>
+            <label>Bottom left - X:</label>
+            <input type="text" id="x1C" class="textEx4">
+            <label>Y:</label>
+            <input type="text" id="y1C" class="textEx4">
+            <br>
+            <label>Top Right - X:</label>
+            <input type="text" id="x2C" class="textEx4">
+            <label>Y:</label>
+            <input type="text" id="y2C" class="textEx4">
+            <br><br>
+
+            <label><b>RECTANGLE B</b></label>
+            <br>
+            <label>Bottom left - X:</label>
+            <input type="text" id="x1D" class="textEx4">
+            <label>Y:</label>
+            <input type="text" id="y1D" class="textEx4">
+            <br>
+            <label>Top Right - X:</label>
+            <input type="text" id="x2D" class="textEx4">
+            <label>Y:</label>
+            <input type="text" id="y2D" class="textEx4">
+            <br><br>
+
+            <input type="button" value="Compute area of intersection" class="button" onclick="ComputeArea()">
         </form>
     </div>
     <br>
