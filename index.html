@@ -4,9 +4,11 @@
     <title>Exercises</title>
     <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="exercise1.js"></script>
     <script type="text/javascript" src="exercise2.js"></script>
     <script type="text/javascript" src="exercise3.js"></script>
+    <script type="text/javascript" src="exercise5.js"></script>
 </head>
 <body>
 
@@ -64,6 +66,22 @@
             <br><br>
 
             <input type="button" value="Check intersection" class="button" onclick="verifyIntersection()">
+        </form>
+    </div>
+    <br>
+
+    <!-- EXERCISE 5 -->
+    <div>
+        <header>Exercise 5: Simple Todo List</header>
+        <form class="list">
+            <input type="text" id="newTask" placeholder="Enter new task...">
+            <input type="button" class="button" value="Add Task" onclick="addTask()">
+            <br><br>
+            <label><b>TO DO</b></label>
+            <div class="todo" id="todo"></div>
+            <hr>
+            <label><b>DONE</b></label>
+            <div class="done" id="done"></div>
         </form>
     </div>
     <br>
