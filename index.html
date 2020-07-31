@@ -6,6 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="exercise1.js"></script>
     <script type="text/javascript" src="exercise2.js"></script>
+    <script type="text/javascript" src="exercise3.js"></script>
 </head>
 <body>
 
@@ -28,6 +29,41 @@
             <label>Enter CNPJ: </label>
             <input type="text" id="cnpjEx2"> 
             <input type="button" value="Validate digits" class="button" onclick="validateDigits()">
+        </form>
+    </div>
+    <br>
+
+    <!-- EXERCISE 3 -->
+    <div class="exercise3">
+        <header>Exercise 3: Test if two rectangles intersect</header>
+        <form>
+            <label><b>RECTANGLE A </b></label>
+            <br>
+            <label>Bottom left - X:</label>
+            <input type="text" id="x1A" class="textEx3">
+            <label>Y:</label>
+            <input type="text" id="y1A" class="textEx3">
+            <br>
+            <label>Top Right - X:</label>
+            <input type="text" id="x2A" class="textEx3">
+            <label>Y:</label>
+            <input type="text" id="y2A" class="textEx3">
+            <br><br>
+
+            <label><b>RECTANGLE B</b></label>
+            <br>
+            <label>Bottom left - X:</label>
+            <input type="text" id="x1B" class="textEx3">
+            <label>Y:</label>
+            <input type="text" id="y1B" class="textEx3">
+            <br>
+            <label>Top Right - X:</label>
+            <input type="text" id="x2B" class="textEx3">
+            <label>Y:</label>
+            <input type="text" id="y2B" class="textEx3">
+            <br><br>
+
+            <input type="button" value="Check intersection" class="button" onclick="verifyIntersection()">
         </form>
     </div>
     <br>
