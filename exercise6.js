@@ -14,21 +14,22 @@ function restClient(){
         auxMonth = parseInt(dateUTC.substring(3,5));
         auxYear = parseInt(dateUTC.substring(6,12));
         
-        if(auxTime < 3){
-            if(auxDay == 1){
-                if(auxMonth == 1){
+        //I don't know if there was a simple method to get Local date and time, so I implemented this way
+        if(auxTime < 3){  //if UTC time is after midnight and before 3am, local time (Brasilia) will be 3 hours less
+            if(auxDay == 1){ // if UTC time is after midnight and before 3am and date is first day in a month, local date will be 1 day less
+                if(auxMonth == 1){ // if UTC time is after midnight and before 3am and date is january 1st, local date will be 1  year less, on december 31st
                     auxMonth = 12;
                     auxYear--;
                 }
-                else if(auxMonth==5 || auxMonth==7 || auxMonth==8 || auxMonth==10 ||auxMonth==12){
+                else if(auxMonth==5 || auxMonth==7 || auxMonth==8 || auxMonth==10 ||auxMonth==12){ //months that previously month have 31 days 
                     auxMonth--;
                     auxDay=31;
                 }
-                else if(auxMonth==2 || auxMonth==4 || auxMonth==6 || auxMonth==9 || auxMonth==11){
+                else if(auxMonth==2 || auxMonth==4 || auxMonth==6 || auxMonth==9 || auxMonth==11){ //months that previously month have 30 days 
                     auxMonth--;
                     auxDay = 30;
                 }
-                else if(auxMonth==3){
+                else if(auxMonth==3){ // months that previously month have 28 or 29 days 
                     auxMonth--;
                     if(auxYear%4==0)
                         auxDay = 29;

@@ -11,6 +11,7 @@ function verifyIntersection(){
     y1B = parseInt(document.getElementById("y1B").value);
     y2B = parseInt(document.getElementById("y2B").value);
 
+    // Checking if all gaps are valid numbers. If don't, request correct filling
     if(!Number.isInteger(x1A) || !Number.isInteger(x2A) || !Number.isInteger(y1A) || !Number.isInteger(y2A) || !Number.isInteger(x1B) || !Number.isInteger(x2B) || !Number.isInteger(y1B) || !Number.isInteger(y2B)){
         $(".resultEx3").remove();
         $(".exercise3").append(
@@ -18,6 +19,7 @@ function verifyIntersection(){
     }
     else{
 
+        // Checking for any intersections
         if((x1B<=x2A && x1B>=x1A && y1B>=y1A && y1B<=y2A)
         || (x2B<=x2A && x2B>=x1A && y1B>=y1A && y1B<=y2A)
         || (x1B<=x2A && x1B>=x1A && y2B>=y1A && y2B<=y2A) 

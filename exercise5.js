@@ -2,13 +2,13 @@ var task = "";
 var countId = 0;
 var list = [];
 
-$(document).ready(function(){
+$(document).ready(function(){  // function to load saved localstorage when refresh page
     initializer();
 });
 
-function initializer(){
+function initializer(){ 
     var arrayTasks = [];
-    for(i=0;i<localStorage.length; i++){
+    for(i=0;i<localStorage.length; i++){ //Reading all tasks saved on localstorage and inserting into and array
         taskKey = localStorage.key(i);
         if(taskKey.includes("task ")){
             arrayTasks[i] = JSON.parse(localStorage.getItem(taskKey));
@@ -16,8 +16,8 @@ function initializer(){
     }
     localStorage.clear();
 
-    for(i=0;i<arrayTasks.length; i++){
-        if(!arrayTasks[i].done){
+    for(i=0;i<arrayTasks.length; i++){ //setting all tasks saved on localstorage
+        if(!arrayTasks[i].done){ //if tasks are not done, set on top div (to do)
             var taskList = {
                 task: arrayTasks[i].task,
                 done: false
@@ -32,7 +32,7 @@ function initializer(){
                 +'</tr></table>');
             countId++;
         }
-        else{
+        else{ //if tasks are done, set on bottom div
             var taskList = {
                 task: arrayTasks[i].task,
                 done: true
@@ -51,7 +51,7 @@ function initializer(){
 
 }
 
-function addTask(){
+function addTask(){ //add new task
     task = document.getElementById("newTask");
 
     var taskList = {
@@ -72,7 +72,7 @@ function addTask(){
     }
 }
 
-function taskDone(id){
+function taskDone(id){ //move task to done
     task = document.getElementById(id);
 
     var taskList = {
@@ -92,7 +92,7 @@ function taskDone(id){
     countId++;
 }
 
-function taskTodo(id){
+function taskTodo(id){ // move task that was done to todo
     task = document.getElementById(id);
 
     var taskList = {
@@ -112,7 +112,7 @@ function taskTodo(id){
     countId++;
 }
 
-function deleteTask(id){
+function deleteTask(id){ //remove task
     $("."+ id).remove();
     window.localStorage.removeItem("task " + id);
 }
