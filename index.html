@@ -105,5 +105,28 @@
     </div>
     <br>
 
+    <!-- EXERCISE 7 -->
+    <div>
+        <header>Exercise 8: Entity Relationship Diagram - Simple Order Manager</header>
+        <p>CLIENT:
+        <br>- clientID (primary key)
+        <br>- name
+        <br>- cpf</p>
+        <p>PRODUCTS:
+        <br>- productID (primary key)
+        <br>- description
+        <br>- value</p>
+        <p>ORDERS:
+        <br>- orderID (primary key)
+        <br>- clientID
+        <br>- productList{productID, amount}
+        <br>- date</p>
+        <p>Each client can order many products and each product can be purchased by many clients (there are a lot of each one)</p>
+        <p>Each order contain client ID, for information of which one did the purchase. Each order also contain a list whith each product purchased in that order (each ID and how many of a same products)</p>
+
+
+    </div>
+    <br>
+
 </body>
 </html>
