@@ -1,0 +1,31 @@
+div{
+    width: 100%;
+    background-color: #E0E0E0;
+    padding-bottom: 10px;
+}
+
+header{
+    font-size: 20px;
+    background-color: #000000;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+form{
+    padding: 10px;
+}
+
+.button{
+    background-color: #A0A0A0;
+}
+
+.textEx3, .textEx4{
+    width: 20px;
+    height: 15px;
+}
+
+.resultEx1, .resultEx2, .resultEx3, .resultEx4{
+    margin-left: 10px;
+    font-weight: bold;
+}
